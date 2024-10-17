@@ -3,6 +3,10 @@ import ProductForm from './components/ProductForm';
 import ProductList from './components/ProductList';
 import ProductDetail from './components/ProductDetail';
 import axios from 'axios';
+import caminhao from "./assets/images/caminhao.png"
+import envio from "./assets/images/envio.png"
+import cartao from "./assets/images/cartao.png"
+import caixa from "./assets/images/caixa.png"
 import './App.css';
 
 const App = () => {
@@ -59,19 +63,19 @@ const App = () => {
       <div className="tables" id="table_icons">
         <div className="row">
           <div className="cell" id="caminhao">
-            <img src="/src/assets/images/caminhao.png" width="25px" alt="Caminhão" />
+            <img src={caminhao} width="25px" alt="Caminhão" />
             <p>frete grátis</p>
           </div>
           <div className="cell">
-            <img src="/src/assets/images/envio.png" width="25px" alt="Envio Internacional" />
+            <img src={envio} width="25px" alt="Envio Internacional" />
             <p>envio internacional</p>
           </div>
           <div className="cell">
-            <img src="/src/assets/images/cartao.png" width="25px" alt="Cartão" />
+            <img src={cartao} width="25px" alt="Cartão" />
             <p>parcele em até 8x</p>
           </div>
           <div className="cell" id="caixa">
-            <img src="/src/assets/images/caixa.png" width="25px" alt="Envio Rápido" />
+            <img src={caixa} width="25px" alt="Envio Rápido" />
             <p>envio rápido</p>
           </div>
         </div>
