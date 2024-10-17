@@ -16,7 +16,7 @@ const App = () => {
 
   const loadProdutos = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/produtos');
+      const response = await axios.get('https:/gerenciamento-de-produtos-grace-server.vercel.app/produtos');
       setProdutos(response.data);
     } catch (error) {
       console.error("Erro ao carregar produtos:", error);
@@ -29,9 +29,9 @@ const App = () => {
 
   const handleSave = async (produto) => {
     if (produto.id) {
-      await axios.put(`http://localhost:3001/produtos/${produto.id}`, produto);
+      await axios.put(`https:/gerenciamento-de-produtos-grace-server.vercel.app/produtos/${produto.id}`, produto);
     } else {
-      await axios.post('http://localhost:3001/produtos', produto);
+      await axios.post('https:/gerenciamento-de-produtos-grace-server.vercel.app/produtos', produto);
     }
     loadProdutos();
     setProdutoSelecionado(null);
